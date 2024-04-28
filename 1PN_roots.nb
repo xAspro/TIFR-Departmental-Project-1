@@ -1,4 +1,4 @@
-In[3128]:= ClearAll["Global`*"]
+In[26]:= ClearAll["Global`*"]
 coefficientsFromPolynomial[poly_,var_]:=CoefficientList[poly,var]
 polynomialFromCoefficients[coefficients_List,var_]:=Fold[#1 var+#2&,0,Reverse[coefficients]]
 removeNegativeOrderTermsTillOrderN[poly_,var_,N_]:=Normal[Series[poly,{var,\[Infinity],0}]]-Normal[Series[poly,{var,\[Infinity],-(N+1)}]]
@@ -49,3 +49,16 @@ which is also
 will check this term by term
 We can verify that here*)
 
+
+During evaluation of In[26]:= Solve::nongen: There may be values of the parameters for which some or all solutions are not valid.
+Out[39]= {{u1->(1/(2+4 En h^2))(16 En^2+12/h^4+(32 En)/h^2-En^2 Sqrt[1+2 En h^2]-(12 Sqrt[1+2 En h^2])/h^4-(20 En Sqrt[1+2 En h^2])/h^2-8 En^2 \[Eta]-(2 \[Eta])/h^4-(8 En \[Eta])/h^2+3 En^2 Sqrt[1+2 En h^2] \[Eta]+(2 Sqrt[1+2 En h^2] \[Eta])/h^4+(6 En Sqrt[1+2 En h^2] \[Eta])/h^2),u2->12/h^4+(8 En)/h^2-(16 En^2)/(2+4 En h^2)-12/(h^4 (2+4 En h^2))-(32 En)/(h^2 (2+4 En h^2))+(En^2 Sqrt[1+2 En h^2])/(2+4 En h^2)+(12 Sqrt[1+2 En h^2])/(h^4 (2+4 En h^2))+(20 En Sqrt[1+2 En h^2])/(h^2 (2+4 En h^2))-(2 \[Eta])/h^4-(4 En \[Eta])/h^2+(8 En^2 \[Eta])/(2+4 En h^2)+(2 \[Eta])/(h^4 (2+4 En h^2))+(8 En \[Eta])/(h^2 (2+4 En h^2))-(3 En^2 Sqrt[1+2 En h^2] \[Eta])/(2+4 En h^2)-(2 Sqrt[1+2 En h^2] \[Eta])/(h^4 (2+4 En h^2))-(6 En Sqrt[1+2 En h^2] \[Eta])/(h^2 (2+4 En h^2)),u3->(6+2 En h^2-\[Eta]-6 En h^2 \[Eta])/(h^2 (-8+3 \[Eta])),u4->1/(8-3 \[Eta])}}
+During evaluation of In[26]:= uroots= {{u1->(1/(2+4 En h^2))(16 En^2+12/h^4+(32 En)/h^2-En^2 Sqrt[1+2 En h^2]-(12 Sqrt[1+2 En h^2])/h^4-(20 En Sqrt[1+2 En h^2])/h^2-8 En^2 \[Eta]-(2 \[Eta])/h^4-(8 En \[Eta])/h^2+3 En^2 Sqrt[1+2 En h^2] \[Eta]+(2 Sqrt[1+2 En h^2] \[Eta])/h^4+(6 En Sqrt[1+2 En h^2] \[Eta])/h^2),u2->12/h^4+(8 En)/h^2-(16 En^2)/(2+4 En h^2)-12/(h^4 (2+4 En h^2))-(32 En)/(h^2 (2+4 En h^2))+(En^2 Sqrt[1+2 En h^2])/(2+4 En h^2)+(12 Sqrt[1+2 En h^2])/(h^4 (2+4 En h^2))+(20 En Sqrt[1+2 En h^2])/(h^2 (2+4 En h^2))-(2 \[Eta])/h^4-(4 En \[Eta])/h^2+(8 En^2 \[Eta])/(2+4 En h^2)+(2 \[Eta])/(h^4 (2+4 En h^2))+(8 En \[Eta])/(h^2 (2+4 En h^2))-(3 En^2 Sqrt[1+2 En h^2] \[Eta])/(2+4 En h^2)-(2 Sqrt[1+2 En h^2] \[Eta])/(h^4 (2+4 En h^2))-(6 En Sqrt[1+2 En h^2] \[Eta])/(h^2 (2+4 En h^2)),u3->(6+2 En h^2-\[Eta]-6 En h^2 \[Eta])/(h^2 (-8+3 \[Eta])),u4->1/(8-3 \[Eta])}}
+During evaluation of In[26]:= The three roots are, 
+Out[42]= (1-Sqrt[1+2 En h^2])/h^2+(1/(c^2 (2+4 En h^2)))(16 En^2+12/h^4+(32 En)/h^2-En^2 Sqrt[1+2 En h^2]-(12 Sqrt[1+2 En h^2])/h^4-(20 En Sqrt[1+2 En h^2])/h^2-8 En^2 \[Eta]-(2 \[Eta])/h^4-(8 En \[Eta])/h^2+3 En^2 Sqrt[1+2 En h^2] \[Eta]+(2 Sqrt[1+2 En h^2] \[Eta])/h^4+(6 En Sqrt[1+2 En h^2] \[Eta])/h^2)
+Out[43]= (1+Sqrt[1+2 En h^2])/h^2+(1/(c^2))(12/h^4+(8 En)/h^2-(16 En^2)/(2+4 En h^2)-12/(h^4 (2+4 En h^2))-(32 En)/(h^2 (2+4 En h^2))+(En^2 Sqrt[1+2 En h^2])/(2+4 En h^2)+(12 Sqrt[1+2 En h^2])/(h^4 (2+4 En h^2))+(20 En Sqrt[1+2 En h^2])/(h^2 (2+4 En h^2))-(2 \[Eta])/h^4-(4 En \[Eta])/h^2+(8 En^2 \[Eta])/(2+4 En h^2)+(2 \[Eta])/(h^4 (2+4 En h^2))+(8 En \[Eta])/(h^2 (2+4 En h^2))-(3 En^2 Sqrt[1+2 En h^2] \[Eta])/(2+4 En h^2)-(2 Sqrt[1+2 En h^2] \[Eta])/(h^4 (2+4 En h^2))-(6 En Sqrt[1+2 En h^2] \[Eta])/(h^2 (2+4 En h^2)))
+Out[44]= c^2/(8-3 \[Eta])+(6+2 En h^2-\[Eta]-6 En h^2 \[Eta])/(h^2 (-8+3 \[Eta]))
+Out[45]= (h^2 (8-3 \[Eta]))/c^2
+Out[48]= True
+Out[49]= True
+Out[50]= True
+During evaluation of In[26]:= These trues represents the correctness of these solutions
