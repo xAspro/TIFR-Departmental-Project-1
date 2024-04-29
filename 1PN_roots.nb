@@ -1,64 +1,480 @@
-In[26]:= ClearAll["Global`*"]
-coefficientsFromPolynomial[poly_,var_]:=CoefficientList[poly,var]
-polynomialFromCoefficients[coefficients_List,var_]:=Fold[#1 var+#2&,0,Reverse[coefficients]]
-removeNegativeOrderTermsTillOrderN[poly_,var_,N_]:=Normal[Series[poly,{var,\[Infinity],0}]]-Normal[Series[poly,{var,\[Infinity],-(N+1)}]]
+(* Content-type: application/vnd.wolfram.mathematica *)
 
-aarray={2 En+(3 En^2 (-1+3 \[Eta]))/c^2,2+(2 En (-6+7 \[Eta]))/c^2,-h^2+(2 En h^2 (1-3 \[Eta])+5 (-2+\[Eta]))/c^2,(h^2 (8-3 \[Eta]))/c^2};
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
 
+(* CreatedBy='Mathematica 14.0' *)
 
-aarray2=FullSimplify[aarray/aarray[[-1]]];
-spoly=Series[(s-(1-Sqrt[1+2 h^2 En])/h^2 -u1/c^2)(s-(1+Sqrt[1+2 h^2 En])/h^2 -u2/c^2)(s-u3-u4*c^2),{s,0,3}];
-sarray=coefficientsFromPolynomial[spoly,s];
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     15779,        472]
+NotebookOptionsPosition[     15426,        458]
+NotebookOutlinePosition[     15823,        474]
+CellTagsIndexPosition[     15780,        471]
+WindowFrame->Normal*)
 
-m=1;
-eqns=Table[aarray2[[i]]==sarray[[i]],{i,m+2}];
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"Only", " ", "has", " ", "1", "PN", " ", "roots"}], "*)"}], "\n", 
+  RowBox[{
+   RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], "\n", 
+   RowBox[{
+    RowBox[{"coefficientsFromPolynomial", "[", 
+     RowBox[{"poly_", ",", "var_"}], "]"}], ":=", 
+    RowBox[{"CoefficientList", "[", 
+     RowBox[{"poly", ",", "var"}], "]"}]}], "\n", 
+   RowBox[{
+    RowBox[{"polynomialFromCoefficients", "[", 
+     RowBox[{"coefficients_List", ",", "var_"}], "]"}], ":=", 
+    RowBox[{"Fold", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"#1", " ", "var"}], "+", "#2"}], "&"}], ",", "0", ",", 
+      RowBox[{"Reverse", "[", "coefficients", "]"}]}], "]"}]}], "\n", 
+   RowBox[{
+    RowBox[{"removeNegativeOrderTermsTillOrderN", "[", 
+     RowBox[{"poly_", ",", "var_", ",", "N_"}], "]"}], ":=", 
+    RowBox[{
+     RowBox[{"Normal", "[", 
+      RowBox[{"Series", "[", 
+       RowBox[{"poly", ",", 
+        RowBox[{"{", 
+         RowBox[{"var", ",", "\[Infinity]", ",", "0"}], "}"}]}], "]"}], "]"}],
+      "-", 
+     RowBox[{"Normal", "[", 
+      RowBox[{"Series", "[", 
+       RowBox[{"poly", ",", 
+        RowBox[{"{", 
+         RowBox[{"var", ",", "\[Infinity]", ",", 
+          RowBox[{"-", 
+           RowBox[{"(", 
+            RowBox[{"N", "+", "1"}], ")"}]}]}], "}"}]}], "]"}], "]"}]}]}], 
+   "\n", "\n", 
+   RowBox[{
+    RowBox[{"aarray", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"2", " ", "En"}], "+", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"3", " ", 
+           RowBox[{"En", "^", "2"}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "1"}], "+", 
+             RowBox[{"3", " ", "\[Eta]"}]}], ")"}]}], ")"}], "/", 
+         RowBox[{"c", "^", "2"}]}]}], ",", 
+       RowBox[{"2", "+", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"2", " ", "En", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "6"}], "+", 
+             RowBox[{"7", " ", "\[Eta]"}]}], ")"}]}], ")"}], "/", 
+         RowBox[{"c", "^", "2"}]}]}], ",", 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"h", "^", "2"}]}], "+", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"2", " ", "En", " ", 
+            RowBox[{"h", "^", "2"}], " ", 
+            RowBox[{"(", 
+             RowBox[{"1", "-", 
+              RowBox[{"3", " ", "\[Eta]"}]}], ")"}]}], "+", 
+           RowBox[{"5", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "2"}], "+", "\[Eta]"}], ")"}]}]}], ")"}], "/", 
+         RowBox[{"c", "^", "2"}]}]}], ",", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"h", "^", "2"}], " ", 
+          RowBox[{"(", 
+           RowBox[{"8", "-", 
+            RowBox[{"3", " ", "\[Eta]"}]}], ")"}]}], ")"}], "/", 
+        RowBox[{"c", "^", "2"}]}]}], "}"}]}], ";"}], "\n", "\n", "\n", 
+   RowBox[{
+    RowBox[{"aarray2", "=", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{"aarray", "/", 
+       RowBox[{"aarray", "[", 
+        RowBox[{"[", 
+         RowBox[{"-", "1"}], "]"}], "]"}]}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"spoly", "=", 
+     RowBox[{"Series", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"s", "-", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"1", "-", 
+             RowBox[{"Sqrt", "[", 
+              RowBox[{"1", "+", 
+               RowBox[{"2", " ", 
+                RowBox[{"h", "^", "2"}], " ", "En"}]}], "]"}]}], ")"}], "/", 
+           RowBox[{"h", "^", "2"}]}], " ", "-", 
+          RowBox[{"u1", "/", 
+           RowBox[{"c", "^", "2"}]}]}], ")"}], 
+        RowBox[{"(", 
+         RowBox[{"s", "-", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"1", "+", 
+             RowBox[{"Sqrt", "[", 
+              RowBox[{"1", "+", 
+               RowBox[{"2", " ", 
+                RowBox[{"h", "^", "2"}], " ", "En"}]}], "]"}]}], ")"}], "/", 
+           RowBox[{"h", "^", "2"}]}], " ", "-", 
+          RowBox[{"u2", "/", 
+           RowBox[{"c", "^", "2"}]}]}], ")"}], 
+        RowBox[{"(", 
+         RowBox[{"s", "-", "u3", "-", 
+          RowBox[{"u4", "*", 
+           RowBox[{"c", "^", "2"}]}]}], ")"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"s", ",", "0", ",", "3"}], "}"}]}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"sarray", "=", 
+     RowBox[{"coefficientsFromPolynomial", "[", 
+      RowBox[{"spoly", ",", "s"}], "]"}]}], ";"}], "\n", "\n", 
+   RowBox[{
+    RowBox[{"m", "=", "1"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"eqns", "=", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"aarray2", "[", 
+         RowBox[{"[", "i", "]"}], "]"}], "==", 
+        RowBox[{"sarray", "[", 
+         RowBox[{"[", "i", "]"}], "]"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", 
+         RowBox[{"m", "+", "2"}]}], "}"}]}], "]"}]}], ";"}], "\n", "\n", "\n", 
+   RowBox[{
+    RowBox[{"removeNegativeOrderTermsTillOrderN", "[", 
+     RowBox[{
+      RowBox[{"FullSimplify", "[", 
+       RowBox[{"eqns", "[", 
+        RowBox[{"[", 
+         RowBox[{"1", ",", "1"}], "]"}], "]"}], "]"}], ",", "c", ",", 
+      RowBox[{"-", "2"}]}], "]"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"removeNegativeOrderTermsTillOrderN", "[", 
+     RowBox[{
+      RowBox[{"FullSimplify", "[", 
+       RowBox[{"eqns", "[", 
+        RowBox[{"[", 
+         RowBox[{"1", ",", "2"}], "]"}], "]"}], "]"}], ",", "c", ",", 
+      RowBox[{"-", "2"}]}], "]"}], ";"}], "\n", "\n", 
+   RowBox[{
+    RowBox[{"For", "[", 
+     RowBox[{
+      RowBox[{"i", "=", "1"}], ",", 
+      RowBox[{"i", "<=", 
+       RowBox[{"m", "+", "2"}]}], ",", 
+      RowBox[{"i", "++"}], ",", "\n", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"eqns", "[", 
+         RowBox[{"[", "i", "]"}], "]"}], "=", 
+        RowBox[{"MapThread", "[", 
+         RowBox[{"Equal", ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"coefficientsFromPolynomial", "[", 
+             RowBox[{
+              RowBox[{"removeNegativeOrderTermsTillOrderN", "[", 
+               RowBox[{
+                RowBox[{"FullSimplify", "[", 
+                 RowBox[{"eqns", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"i", ",", "1"}], "]"}], "]"}], "]"}], ",", "c", 
+                ",", 
+                RowBox[{"2", "*", "m"}]}], "]"}], ",", "c"}], "]"}], ",", 
+            RowBox[{"coefficientsFromPolynomial", "[", 
+             RowBox[{
+              RowBox[{"removeNegativeOrderTermsTillOrderN", "[", 
+               RowBox[{
+                RowBox[{"FullSimplify", "[", 
+                 RowBox[{"eqns", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"i", ",", "2"}], "]"}], "]"}], "]"}], ",", "c", 
+                ",", 
+                RowBox[{"2", "*", "m"}]}], "]"}], ",", "c"}], "]"}]}], 
+           "}"}]}], "]"}]}], ";"}]}], "\n", "]"}], ";"}], "\n", "\n", "\n", 
+   RowBox[{"uroots", "=", 
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{"Flatten", "[", "eqns", "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"u1", ",", "u2", ",", "u3", ",", "u4"}], "}"}]}], "]"}]}], 
+   "\n", 
+   RowBox[{"Print", "[", 
+    RowBox[{"\"\<uroots= \>\"", ",", "uroots"}], "]"}], "\n", "\n", 
+   RowBox[{"Print", "[", "\"\<The three roots are, \>\"", "]"}], "\n", 
+   RowBox[{"s1", "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{"1", "+", 
+           RowBox[{"2", " ", 
+            RowBox[{"h", "^", "2"}], " ", "En"}]}], "]"}]}], ")"}], "/", 
+       RowBox[{"h", "^", "2"}]}], " ", "+", 
+      RowBox[{"u1", "/", 
+       RowBox[{"c", "^", "2"}]}]}], "/.", 
+     RowBox[{"uroots", "[", 
+      RowBox[{"[", 
+       RowBox[{"1", ",", "1"}], "]"}], "]"}]}]}], "\n", 
+   RowBox[{"s2", "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "+", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{"1", "+", 
+           RowBox[{"2", " ", 
+            RowBox[{"h", "^", "2"}], " ", "En"}]}], "]"}]}], ")"}], "/", 
+       RowBox[{"h", "^", "2"}]}], " ", "+", 
+      RowBox[{"u2", "/", 
+       RowBox[{"c", "^", "2"}]}]}], "/.", 
+     RowBox[{"uroots", "[", 
+      RowBox[{"[", 
+       RowBox[{"1", ",", "2"}], "]"}], "]"}]}]}], "\n", "\n", 
+   RowBox[{"s3", "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"u3", "+", 
+       RowBox[{"u4", "*", 
+        RowBox[{"c", "^", "2"}]}]}], "/.", 
+      RowBox[{"uroots", "[", 
+       RowBox[{"[", 
+        RowBox[{"1", ",", "3"}], "]"}], "]"}]}], "/.", 
+     RowBox[{"uroots", "[", 
+      RowBox[{"[", 
+       RowBox[{"1", ",", "4"}], "]"}], "]"}]}]}], "\n", 
+   RowBox[{"aarray", "[", 
+    RowBox[{"[", 
+     RowBox[{"-", "1"}], "]"}], "]"}], "\n", "\n", 
+   RowBox[{"(*", 
+    RowBox[{"Got", " ", "these", " ", "values", " ", "from", " ", "Cho", 
+     RowBox[{"(", "Hyperbolic", ")"}]}], "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"sm", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{"1", "+", 
+           RowBox[{"2", " ", 
+            RowBox[{"h", "^", "2"}], " ", "En"}]}], "]"}]}], ")"}], "/", 
+       RowBox[{"h", "^", "2"}]}], " ", "+", 
+      RowBox[{
+       RowBox[{"1", "/", 
+        RowBox[{"c", "^", "2"}]}], " ", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"1", "-", 
+             RowBox[{"Sqrt", "[", 
+              RowBox[{"1", "+", 
+               RowBox[{"2", " ", 
+                RowBox[{"h", "^", "2"}], " ", "En"}]}], "]"}]}], ")"}], "^", 
+           "2"}], 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "\[Eta]"}], "-", "9", "-", 
+            RowBox[{"2", 
+             RowBox[{"(", 
+              RowBox[{"\[Eta]", "-", "7"}], ")"}], 
+             RowBox[{"Sqrt", "[", 
+              RowBox[{"1", "+", 
+               RowBox[{"2", " ", 
+                RowBox[{"h", "^", "2"}], " ", "En"}]}], "]"}]}], "+", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"3", "\[Eta]"}], "-", "1"}], ")"}], 
+             RowBox[{"(", 
+              RowBox[{"1", "+", 
+               RowBox[{"2", 
+                RowBox[{"h", "^", "2"}], " ", "En"}]}], ")"}]}]}], ")"}]}], 
+         ")"}], "/", 
+        RowBox[{"(", 
+         RowBox[{"8", 
+          RowBox[{"h", "^", "4"}], 
+          RowBox[{"Sqrt", "[", 
+           RowBox[{"1", "+", 
+            RowBox[{"2", " ", 
+             RowBox[{"h", "^", "2"}], " ", "En"}]}], "]"}]}], ")"}]}]}]}]}], 
+    ";"}], "\n", 
+   RowBox[{
+    RowBox[{"sp", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "+", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{"1", "+", 
+           RowBox[{"2", " ", 
+            RowBox[{"h", "^", "2"}], " ", "En"}]}], "]"}]}], ")"}], "/", 
+       RowBox[{"h", "^", "2"}]}], " ", "-", 
+      RowBox[{
+       RowBox[{"1", "/", 
+        RowBox[{"c", "^", "2"}]}], " ", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"1", "+", 
+             RowBox[{"Sqrt", "[", 
+              RowBox[{"1", "+", 
+               RowBox[{"2", " ", 
+                RowBox[{"h", "^", "2"}], " ", "En"}]}], "]"}]}], ")"}], "^", 
+           "2"}], 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "\[Eta]"}], "-", "9", "+", 
+            RowBox[{"2", 
+             RowBox[{"(", 
+              RowBox[{"\[Eta]", "-", "7"}], ")"}], 
+             RowBox[{"Sqrt", "[", 
+              RowBox[{"1", "+", 
+               RowBox[{"2", " ", 
+                RowBox[{"h", "^", "2"}], " ", "En"}]}], "]"}]}], "+", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"3", "\[Eta]"}], "-", "1"}], ")"}], 
+             RowBox[{"(", 
+              RowBox[{"1", "+", 
+               RowBox[{"2", 
+                RowBox[{"h", "^", "2"}], " ", "En"}]}], ")"}]}]}], ")"}]}], 
+         ")"}], "/", 
+        RowBox[{"(", 
+         RowBox[{"8", 
+          RowBox[{"h", "^", "4"}], 
+          RowBox[{"Sqrt", "[", 
+           RowBox[{"1", "+", 
+            RowBox[{"2", " ", 
+             RowBox[{"h", "^", "2"}], " ", "En"}]}], "]"}]}], ")"}]}]}]}]}], 
+    ";"}], "\n", "\n", 
+   RowBox[{"FullSimplify", "[", 
+    RowBox[{"s1", "==", "sm"}], "]"}], "\n", 
+   RowBox[{"FullSimplify", "[", 
+    RowBox[{"s2", "==", "sp"}], "]"}], "\n", 
+   RowBox[{"FullSimplify", "[", 
+    RowBox[{
+     RowBox[{"-", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"h", "^", "2"}], 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "8"}], "+", 
+              RowBox[{"3", "\[Eta]"}]}], ")"}]}], ")"}], "/", 
+          RowBox[{"c", "^", "2"}]}], " ", "s"}], "+", 
+        RowBox[{"h", "^", "2"}], "+", 
+        RowBox[{
+         RowBox[{"1", "/", 
+          RowBox[{"c", "^", "2"}]}], 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "6"}], "+", "\[Eta]", "+", 
+           RowBox[{"2", " ", 
+            RowBox[{"h", "^", "2"}], " ", "En", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "1"}], "+", 
+              RowBox[{"3", "\[Eta]"}]}], ")"}]}]}], ")"}]}]}], ")"}]}], "==", 
+     
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"s", "-", "s3"}], ")"}], "*", 
+      RowBox[{"aarray", "[", 
+       RowBox[{"[", 
+        RowBox[{"-", "1"}], "]"}], "]"}]}]}], "]"}], "\n", 
+   RowBox[{
+   "Print", "[", 
+    "\"\<These trues represents the correctness of these solutions\>\"", 
+    "]"}], "\n", "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"Therefore", "\n", 
+      RowBox[{"rdot", "^", "2"}]}], "=", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"s", "-", "s1"}], ")"}], 
+       RowBox[{"(", 
+        RowBox[{"s", "-", "s2"}], ")"}], 
+       RowBox[{"(", 
+        RowBox[{"s", "-", "s3"}], ")"}], "*", 
+       RowBox[{"aarray", "[", 
+        RowBox[{"[", 
+         RowBox[{"-", "1"}], "]"}], "]"}], "\n", "which", " ", "is", " ", 
+       "also", "\n", 
+       RowBox[{"(", 
+        RowBox[{"s1", "-", "s"}], ")"}], 
+       RowBox[{"(", 
+        RowBox[{"s", "-", "s2"}], ")"}], 
+       RowBox[{"(", 
+        RowBox[{"s", "-", "s3"}], ")"}]}], "=", 
+      RowBox[{
+       RowBox[{"polynomialFromCoefficients", "[", 
+        RowBox[{"aarray2", ",", "s"}], "]"}], "\n", "\n", "will", " ", 
+       "check", " ", "this", " ", "term", " ", "by", " ", "term", "\n", "We", 
+       " ", "can", " ", "verify", " ", "that", " ", "here"}]}]}], 
+    "*)"}]}]}]], "Input",
+ CellChangeTimes->{{3.923381817498028*^9, 
+  3.923381818692717*^9}},ExpressionUUID->"b5538908-dbaf-4fbf-a225-\
+8a3dc0e00bc9"]
+},
+WindowSize->{808, 747},
+WindowMargins->{{12, Automatic}, {Automatic, 24}},
+FrontEndVersion->"14.0 for Mac OS X ARM (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"92274e64-0e93-41c7-b581-4ed4e726316d"
+]
+(* End of Notebook Content *)
 
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 14864, 436, 1417, "Input",ExpressionUUID->"b5538908-dbaf-4fbf-a225-8a3dc0e00bc9"]
+}
+]
+*)
 
-removeNegativeOrderTermsTillOrderN[FullSimplify[eqns[[1,1]]],c,-2];
-removeNegativeOrderTermsTillOrderN[FullSimplify[eqns[[1,2]]],c,-2];
-
-For[i=1,i<=m+2,i++,
-eqns[[i]]=MapThread[Equal,{coefficientsFromPolynomial[removeNegativeOrderTermsTillOrderN[FullSimplify[eqns[[i,1]]],c,2*m],c],coefficientsFromPolynomial[removeNegativeOrderTermsTillOrderN[FullSimplify[eqns[[i,2]]],c,2*m],c]}];
-];
-
-
-uroots=Solve[Flatten[eqns],{u1,u2,u3,u4}]
-Print["uroots= ",uroots]
-
-Print["The three roots are, "]
-s1=(1-Sqrt[1+2 h^2 En])/h^2 +u1/c^2/.uroots[[1,1]]
-s2=(1+Sqrt[1+2 h^2 En])/h^2 +u2/c^2/.uroots[[1,2]]
-
-s3=u3+u4*c^2/.uroots[[1,3]]/.uroots[[1,4]]
-aarray[[-1]]
-
-(*Got these values from Cho(Hyperbolic)*)
-sm=(1-Sqrt[1+2 h^2 En])/h^2 +1/c^2 ((1-Sqrt[1+2 h^2 En])^2(-\[Eta]-9-2(\[Eta]-7)Sqrt[1+2 h^2 En]+(3\[Eta]-1)(1+2h^2 En)))/(8h^4Sqrt[1+2 h^2 En]);
-sp=(1+Sqrt[1+2 h^2 En])/h^2 -1/c^2 ((1+Sqrt[1+2 h^2 En])^2(-\[Eta]-9+2(\[Eta]-7)Sqrt[1+2 h^2 En]+(3\[Eta]-1)(1+2h^2 En)))/(8h^4Sqrt[1+2 h^2 En]);
-
-FullSimplify[s1==sm]
-FullSimplify[s2==sp]
-FullSimplify[-((h^2(-8+3\[Eta]))/c^2 s+h^2+1/c^2(-6+\[Eta]+2 h^2 En (-1+3\[Eta])))==(s-s3)*aarray[[-1]]]
-Print["These trues represents the correctness of these solutions"]
-
-(*Therefore
-rdot^2= (s-s1)(s-s2)(s-s3)*aarray[[-1]]
-which is also
-(s1-s)(s-s2)(s-s3)=polynomialFromCoefficients[aarray2,s]
-
-will check this term by term
-We can verify that here*)
-
-
-During evaluation of In[26]:= Solve::nongen: There may be values of the parameters for which some or all solutions are not valid.
-Out[39]= {{u1->(1/(2+4 En h^2))(16 En^2+12/h^4+(32 En)/h^2-En^2 Sqrt[1+2 En h^2]-(12 Sqrt[1+2 En h^2])/h^4-(20 En Sqrt[1+2 En h^2])/h^2-8 En^2 \[Eta]-(2 \[Eta])/h^4-(8 En \[Eta])/h^2+3 En^2 Sqrt[1+2 En h^2] \[Eta]+(2 Sqrt[1+2 En h^2] \[Eta])/h^4+(6 En Sqrt[1+2 En h^2] \[Eta])/h^2),u2->12/h^4+(8 En)/h^2-(16 En^2)/(2+4 En h^2)-12/(h^4 (2+4 En h^2))-(32 En)/(h^2 (2+4 En h^2))+(En^2 Sqrt[1+2 En h^2])/(2+4 En h^2)+(12 Sqrt[1+2 En h^2])/(h^4 (2+4 En h^2))+(20 En Sqrt[1+2 En h^2])/(h^2 (2+4 En h^2))-(2 \[Eta])/h^4-(4 En \[Eta])/h^2+(8 En^2 \[Eta])/(2+4 En h^2)+(2 \[Eta])/(h^4 (2+4 En h^2))+(8 En \[Eta])/(h^2 (2+4 En h^2))-(3 En^2 Sqrt[1+2 En h^2] \[Eta])/(2+4 En h^2)-(2 Sqrt[1+2 En h^2] \[Eta])/(h^4 (2+4 En h^2))-(6 En Sqrt[1+2 En h^2] \[Eta])/(h^2 (2+4 En h^2)),u3->(6+2 En h^2-\[Eta]-6 En h^2 \[Eta])/(h^2 (-8+3 \[Eta])),u4->1/(8-3 \[Eta])}}
-During evaluation of In[26]:= uroots= {{u1->(1/(2+4 En h^2))(16 En^2+12/h^4+(32 En)/h^2-En^2 Sqrt[1+2 En h^2]-(12 Sqrt[1+2 En h^2])/h^4-(20 En Sqrt[1+2 En h^2])/h^2-8 En^2 \[Eta]-(2 \[Eta])/h^4-(8 En \[Eta])/h^2+3 En^2 Sqrt[1+2 En h^2] \[Eta]+(2 Sqrt[1+2 En h^2] \[Eta])/h^4+(6 En Sqrt[1+2 En h^2] \[Eta])/h^2),u2->12/h^4+(8 En)/h^2-(16 En^2)/(2+4 En h^2)-12/(h^4 (2+4 En h^2))-(32 En)/(h^2 (2+4 En h^2))+(En^2 Sqrt[1+2 En h^2])/(2+4 En h^2)+(12 Sqrt[1+2 En h^2])/(h^4 (2+4 En h^2))+(20 En Sqrt[1+2 En h^2])/(h^2 (2+4 En h^2))-(2 \[Eta])/h^4-(4 En \[Eta])/h^2+(8 En^2 \[Eta])/(2+4 En h^2)+(2 \[Eta])/(h^4 (2+4 En h^2))+(8 En \[Eta])/(h^2 (2+4 En h^2))-(3 En^2 Sqrt[1+2 En h^2] \[Eta])/(2+4 En h^2)-(2 Sqrt[1+2 En h^2] \[Eta])/(h^4 (2+4 En h^2))-(6 En Sqrt[1+2 En h^2] \[Eta])/(h^2 (2+4 En h^2)),u3->(6+2 En h^2-\[Eta]-6 En h^2 \[Eta])/(h^2 (-8+3 \[Eta])),u4->1/(8-3 \[Eta])}}
-During evaluation of In[26]:= The three roots are, 
-Out[42]= (1-Sqrt[1+2 En h^2])/h^2+(1/(c^2 (2+4 En h^2)))(16 En^2+12/h^4+(32 En)/h^2-En^2 Sqrt[1+2 En h^2]-(12 Sqrt[1+2 En h^2])/h^4-(20 En Sqrt[1+2 En h^2])/h^2-8 En^2 \[Eta]-(2 \[Eta])/h^4-(8 En \[Eta])/h^2+3 En^2 Sqrt[1+2 En h^2] \[Eta]+(2 Sqrt[1+2 En h^2] \[Eta])/h^4+(6 En Sqrt[1+2 En h^2] \[Eta])/h^2)
-Out[43]= (1+Sqrt[1+2 En h^2])/h^2+(1/(c^2))(12/h^4+(8 En)/h^2-(16 En^2)/(2+4 En h^2)-12/(h^4 (2+4 En h^2))-(32 En)/(h^2 (2+4 En h^2))+(En^2 Sqrt[1+2 En h^2])/(2+4 En h^2)+(12 Sqrt[1+2 En h^2])/(h^4 (2+4 En h^2))+(20 En Sqrt[1+2 En h^2])/(h^2 (2+4 En h^2))-(2 \[Eta])/h^4-(4 En \[Eta])/h^2+(8 En^2 \[Eta])/(2+4 En h^2)+(2 \[Eta])/(h^4 (2+4 En h^2))+(8 En \[Eta])/(h^2 (2+4 En h^2))-(3 En^2 Sqrt[1+2 En h^2] \[Eta])/(2+4 En h^2)-(2 Sqrt[1+2 En h^2] \[Eta])/(h^4 (2+4 En h^2))-(6 En Sqrt[1+2 En h^2] \[Eta])/(h^2 (2+4 En h^2)))
-Out[44]= c^2/(8-3 \[Eta])+(6+2 En h^2-\[Eta]-6 En h^2 \[Eta])/(h^2 (-8+3 \[Eta]))
-Out[45]= (h^2 (8-3 \[Eta]))/c^2
-Out[48]= True
-Out[49]= True
-Out[50]= True
-During evaluation of In[26]:= These trues represents the correctness of these solutions
