@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    114480,       2842]
-NotebookOptionsPosition[    108875,       2750]
-NotebookOutlinePosition[    109271,       2766]
-CellTagsIndexPosition[    109228,       2763]
+NotebookDataLength[    113912,       2830]
+NotebookOptionsPosition[    108308,       2738]
+NotebookOutlinePosition[    108705,       2754]
+CellTagsIndexPosition[    108662,       2751]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -22,13 +22,13 @@ Notebook[{
 Cell[CellGroupData[{
 Cell["Hyperbolic Orbit", "Title",
  CellChangeTimes->{{3.924161068021928*^9, 
-  3.924161082315174*^9}},ExpressionUUID->"bec725c1-dfcd-4abe-aef1-\
-67de59b157f6"],
+  3.924161082315174*^9}},ExpressionUUID->"3ea3297b-b685-41cd-ba47-\
+7dffad8d90c8"],
 
 Cell[BoxData[{
  RowBox[{
   RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], 
-  "\[IndentingNewLine]"}], "\n", 
+  "\n"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"coefficientsFromPolynomial", "[", 
    RowBox[{"poly_", ",", "var_"}], "]"}], ":=", 
@@ -44,7 +44,7 @@ Cell[BoxData[{
       RowBox[{
        RowBox[{"#1", " ", "var"}], "+", "#2"}], "&"}], ",", "0", ",", 
      RowBox[{"Reverse", "[", "coefficients", "]"}]}], "]"}]}], 
-  "\n"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\n", 
  RowBox[{
   RowBox[{
    RowBox[{"removeNegativeOrderTermsTillOrderN", "[", 
@@ -90,7 +90,7 @@ Cell[BoxData[{
    3.9240704456375093`*^9},
  Background->RGBColor[1, 0.9, 1],
  CellLabel->
-  "In[155]:=",ExpressionUUID->"12ad4c6b-9df2-4fcd-82d4-50f233574409"],
+  "In[106]:=",ExpressionUUID->"600b78cb-6309-40f1-9ea5-b6f72785797a"],
 
 Cell[CellGroupData[{
 
@@ -100,7 +100,7 @@ Cell["Computing sroots", "Subtitle",
  CellChangeTimes->{{3.924070657214579*^9, 3.924070696711005*^9}, 
    3.924070858184053*^9},
  Background->RGBColor[
-  1, 1, 0.85],ExpressionUUID->"baca1c8f-a4da-42c5-96b0-84477f554e12"],
+  1, 1, 0.85],ExpressionUUID->"822162f8-880a-4f0f-98a8-b5fdf44e1481"],
 
 Cell[BoxData[
  RowBox[{"\n", 
@@ -313,7 +313,7 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"aarray", "[", 
      RowBox[{"[", 
-      RowBox[{"-", "1"}], "]"}], "]"}], ";"}], "\n", "\[IndentingNewLine]", 
+      RowBox[{"-", "1"}], "]"}], "]"}], ";"}], "\[IndentingNewLine]", "\n", 
    RowBox[{"Print", "[", "\"\<The three sroots are, \>\"", "]"}], 
    "\[IndentingNewLine]", 
    RowBox[{"Print", "[", 
@@ -336,17 +336,17 @@ Cell[BoxData[
    3.924062433125815*^9, {3.9240630837183743`*^9, 3.92406313591995*^9}, {
    3.924070406170537*^9, 3.924070420333021*^9}, 3.924070482996826*^9, {
    3.924070568794161*^9, 3.924070572678998*^9}, 3.92407066409977*^9, {
-   3.924070767783844*^9, 3.924070794236043*^9}, {3.924425321765239*^9, 
-   3.9244253301754913`*^9}},
+   3.924070767783844*^9, 3.924070794236043*^9}, {3.924425156947016*^9, 
+   3.9244251674422283`*^9}},
  Background->RGBColor[1, 1, 0.85],
  CellLabel->
-  "In[160]:=",ExpressionUUID->"dbfc6131-9f53-4ea1-a84d-e7e5ce41a324"],
+  "In[111]:=",ExpressionUUID->"210c56a8-a445-42ee-999c-421636490435"],
 
 Cell[BoxData[
  TemplateBox[{
   "Solve", "nongen", 
    "\"There may be values of the parameters for which some or all solutions \
-are not valid.\"", 2, 167, 5, 18301684917616668603, "Local"},
+are not valid.\"", 2, 118, 4, 18301684917616668603, "Local"},
   "MessageTemplate"]], "Message", "MSG",
  CellFrame->{{0, 0}, {0, 0}},
  CellGroupingRules->{"GroupTogetherGrouping", 10000.},
@@ -360,12 +360,11 @@ are not valid.\"", 2, 167, 5, 18301684917616668603, "Local"},
    3.923985086809977*^9, 3.92398513733328*^9, 3.923985284700047*^9, 
    3.9240623646545763`*^9, 3.9240630407489*^9, 3.924063164434409*^9, 
    3.92407044992767*^9, 3.924070482996957*^9, 3.924070664099963*^9, 
-   3.924070926249741*^9, 3.924071599193037*^9, 3.924161331570539*^9, 
-   3.9244253410079517`*^9},
+   3.924070926249741*^9, 3.924071599193037*^9, 3.924425305424458*^9},
  Background->RGBColor[1, 1, 0.85],
  CellLabel->
   "During evaluation of \
-In[160]:=",ExpressionUUID->"c5b7f070-3751-42a3-ba21-0b3d1229e6e3"],
+In[111]:=",ExpressionUUID->"e51f8b71-9160-4bc3-ae6b-61ac72b4f05a"],
 
 Cell[BoxData["\<\"The three sroots are, \"\>"], "Print",
  CellFrame->{{0, 0}, {0, 0}},
@@ -380,12 +379,11 @@ Cell[BoxData["\<\"The three sroots are, \"\>"], "Print",
    3.923985086817416*^9, 3.923985137338623*^9, 3.923985284705555*^9, 
    3.924062364666054*^9, 3.924063040753368*^9, 3.924063164438579*^9, 
    3.924070449931705*^9, 3.924070482997039*^9, 3.9240706641001*^9, 
-   3.924070926254141*^9, 3.924071599196424*^9, 3.924161331574044*^9, 
-   3.924425341010948*^9},
+   3.924070926254141*^9, 3.924071599196424*^9, 3.924425305427751*^9},
  Background->RGBColor[1, 1, 0.85],
  CellLabel->
   "During evaluation of \
-In[160]:=",ExpressionUUID->"11c753d1-d18b-4350-84ab-e6e33231be81"],
+In[111]:=",ExpressionUUID->"7723ffdb-46da-47d0-b0cc-359e12e9d9d8"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -499,12 +497,11 @@ Cell[BoxData[
    3.923985086817416*^9, 3.923985137338623*^9, 3.923985284705555*^9, 
    3.924062364666054*^9, 3.924063040753368*^9, 3.924063164438579*^9, 
    3.924070449931705*^9, 3.924070482997039*^9, 3.9240706641001*^9, 
-   3.924070926254141*^9, 3.924071599196424*^9, 3.924161331574044*^9, 
-   3.924425341011683*^9},
+   3.924070926254141*^9, 3.924071599196424*^9, 3.924425305428412*^9},
  Background->RGBColor[1, 1, 0.85],
  CellLabel->
   "During evaluation of \
-In[160]:=",ExpressionUUID->"0a37f91b-fb22-4cf3-abe8-49b932a6e6b7"],
+In[111]:=",ExpressionUUID->"0eb5f2d2-d137-4cfc-8d6c-c91b9d58d019"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -665,12 +662,11 @@ $CellContext`h^(-4) (1 +
    3.923985086817416*^9, 3.923985137338623*^9, 3.923985284705555*^9, 
    3.924062364666054*^9, 3.924063040753368*^9, 3.924063164438579*^9, 
    3.924070449931705*^9, 3.924070482997039*^9, 3.9240706641001*^9, 
-   3.924070926254141*^9, 3.924071599196424*^9, 3.924161331574044*^9, 
-   3.924425341013246*^9},
+   3.924070926254141*^9, 3.924071599196424*^9, 3.924425305429586*^9},
  Background->RGBColor[1, 1, 0.85],
  CellLabel->
   "During evaluation of \
-In[160]:=",ExpressionUUID->"8f06e1ff-32aa-4df8-a78a-4ca45853fed3"],
+In[111]:=",ExpressionUUID->"6a2ede49-84f0-47e8-8f58-b967d38fa5c2"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -712,12 +708,11 @@ Cell[BoxData[
    3.923985086817416*^9, 3.923985137338623*^9, 3.923985284705555*^9, 
    3.924062364666054*^9, 3.924063040753368*^9, 3.924063164438579*^9, 
    3.924070449931705*^9, 3.924070482997039*^9, 3.9240706641001*^9, 
-   3.924070926254141*^9, 3.924071599196424*^9, 3.924161331574044*^9, 
-   3.924425341014431*^9},
+   3.924070926254141*^9, 3.924071599196424*^9, 3.9244253054305763`*^9},
  Background->RGBColor[1, 1, 0.85],
  CellLabel->
   "During evaluation of \
-In[160]:=",ExpressionUUID->"12fd3cb1-c62c-4b9c-83fd-748c84109a7e"]
+In[111]:=",ExpressionUUID->"c7fc60d1-9981-485d-a8d6-a2a004ef25c0"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -728,7 +723,7 @@ Cell["Verification of the roots", "Subtitle",
  CellChangeTimes->{{3.924070707324493*^9, 3.924070743059459*^9}, 
    3.9240708549062757`*^9},
  Background->RGBColor[
-  0.88, 1, 0.88],ExpressionUUID->"67f7cd29-3cb3-4a04-974e-96936912a4f6"],
+  0.88, 1, 0.88],ExpressionUUID->"9631c49f-0c4d-43b2-a15b-d6187323d444"],
 
 Cell[BoxData[
  RowBox[{"(*", 
@@ -750,7 +745,7 @@ Cell[BoxData[
    3.9240707130970993`*^9},
  Background->RGBColor[0.88, 1, 0.88],
  CellLabel->
-  "In[176]:=",ExpressionUUID->"ad0b0a4d-6579-4684-a01a-1518ff03af66"],
+  "In[127]:=",ExpressionUUID->"c1af4fb7-da9e-4b1d-ac4f-bb5b5d9c1c49"],
 
 Cell[BoxData[
  RowBox[{
@@ -904,7 +899,7 @@ Cell[BoxData[
    RowBox[{
    "Print", "[", 
     "\"\<These trues represents the correctness of these solutions\>\"", 
-    "]"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    "]"}], "\n", "\[IndentingNewLine]", 
    RowBox[{"(*", 
     RowBox[{
      RowBox[{"Therefore", "\n", 
@@ -928,8 +923,8 @@ Cell[BoxData[
        RowBox[{"(", 
         RowBox[{"s", "-", "s3"}], ")"}]}], "=", 
       RowBox[{"polynomialFromCoefficients", "[", 
-       RowBox[{"aarray2", ",", "s"}], "]"}]}]}], "\n", "*)"}], "\n", "\n", 
-   "\n", 
+       RowBox[{"aarray2", ",", "s"}], "]"}]}]}], "\n", "*)"}], 
+   "\[IndentingNewLine]", "\n", "\n", 
    RowBox[{"rdotsq", "=", 
     RowBox[{"Normal", "[", 
      RowBox[{"Series", "[", 
@@ -977,10 +972,10 @@ order of 1/c^2\>\"", "]"}]}]}]], "Input",
    3.923386529880168*^9, 3.923386550509076*^9}, 3.923386603409897*^9, {
    3.924063241291026*^9, 3.924063248682783*^9}, {3.924070576447672*^9, 
    3.924070578453304*^9}, 3.924070635334515*^9, 3.924070713097544*^9, {
-   3.924425334560294*^9, 3.924425337998919*^9}},
+   3.92442519395472*^9, 3.924425197839932*^9}},
  Background->RGBColor[0.88, 1, 0.88],
  CellLabel->
-  "In[177]:=",ExpressionUUID->"2b858c12-270c-4efe-b5a7-99ffd90246db"],
+  "In[128]:=",ExpressionUUID->"885e4a84-ea23-4414-9902-f006daf5c7a4"],
 
 Cell[BoxData["True"], "Output",
  CellFrame->{{0, 0}, {0, 0}},
@@ -994,10 +989,10 @@ Cell[BoxData["True"], "Output",
    3.923985284725133*^9, 3.9240623648670883`*^9, 3.924063040961043*^9, 
    3.9240631646408567`*^9, 3.924063250136647*^9, 3.92407045010114*^9, 
    3.9240706353346863`*^9, 3.924070713097659*^9, 3.9240709263507357`*^9, 
-   3.924071599305294*^9, 3.924161331688773*^9, 3.924425341089657*^9},
+   3.924071599305294*^9, 3.924425305446097*^9},
  Background->RGBColor[0.88, 1, 0.88],
  CellLabel->
-  "Out[179]=",ExpressionUUID->"49ca2ea1-9103-4179-928e-9adcee007cb1"],
+  "Out[130]=",ExpressionUUID->"d7a31c74-4383-4205-8c95-373494b10e87"],
 
 Cell[BoxData["True"], "Output",
  CellFrame->{{0, 0}, {0, 0}},
@@ -1011,10 +1006,10 @@ Cell[BoxData["True"], "Output",
    3.923985284725133*^9, 3.9240623648670883`*^9, 3.924063040961043*^9, 
    3.9240631646408567`*^9, 3.924063250136647*^9, 3.92407045010114*^9, 
    3.9240706353346863`*^9, 3.924070713097659*^9, 3.9240709263507357`*^9, 
-   3.924071599305294*^9, 3.924161331688773*^9, 3.9244253411606073`*^9},
+   3.924071599305294*^9, 3.924425305446706*^9},
  Background->RGBColor[0.88, 1, 0.88],
  CellLabel->
-  "Out[180]=",ExpressionUUID->"4ab99243-7a1f-4ffd-941a-9213f0554f26"],
+  "Out[131]=",ExpressionUUID->"346377a7-e44f-4a6c-bd8d-b546ba13c393"],
 
 Cell[BoxData["True"], "Output",
  CellFrame->{{0, 0}, {0, 0}},
@@ -1028,10 +1023,10 @@ Cell[BoxData["True"], "Output",
    3.923985284725133*^9, 3.9240623648670883`*^9, 3.924063040961043*^9, 
    3.9240631646408567`*^9, 3.924063250136647*^9, 3.92407045010114*^9, 
    3.9240706353346863`*^9, 3.924070713097659*^9, 3.9240709263507357`*^9, 
-   3.924071599305294*^9, 3.924161331688773*^9, 3.924425341168208*^9},
+   3.924071599305294*^9, 3.924425305447143*^9},
  Background->RGBColor[0.88, 1, 0.88],
  CellLabel->
-  "Out[181]=",ExpressionUUID->"7a2a3217-ffde-4d7c-aef0-1b7c206529c6"],
+  "Out[132]=",ExpressionUUID->"cbc3eba0-5a56-4bb6-8a89-5276f678ebef"],
 
 Cell[BoxData["\<\"These trues represents the correctness of these solutions\"\
 \>"], "Print",
@@ -1046,11 +1041,11 @@ Cell[BoxData["\<\"These trues represents the correctness of these solutions\"\
    3.923985284727096*^9, 3.924062364869119*^9, 3.924063040962957*^9, 
    3.924063164643017*^9, 3.924063250139789*^9, 3.924070450103228*^9, 
    3.924070635335123*^9, 3.924070713097943*^9, 3.924070926430721*^9, 
-   3.9240715993879156`*^9, 3.924161331765367*^9, 3.924425341168768*^9},
+   3.9240715993879156`*^9, 3.924425305447579*^9},
  Background->RGBColor[0.88, 1, 0.88],
  CellLabel->
   "During evaluation of \
-In[177]:=",ExpressionUUID->"c6d89c2a-60d2-41db-8edc-6385483eb6d6"],
+In[128]:=",ExpressionUUID->"1571391a-0df4-4678-975a-eb10ed45806c"],
 
 Cell[BoxData[
  RowBox[{
@@ -1132,10 +1127,10 @@ Cell[BoxData[
    3.923985284725133*^9, 3.9240623648670883`*^9, 3.924063040961043*^9, 
    3.9240631646408567`*^9, 3.924063250136647*^9, 3.92407045010114*^9, 
    3.9240706353346863`*^9, 3.924070713097659*^9, 3.9240709263507357`*^9, 
-   3.924071599305294*^9, 3.924161331688773*^9, 3.924425341204117*^9},
+   3.924071599305294*^9, 3.924425305544908*^9},
  Background->RGBColor[0.88, 1, 0.88],
  CellLabel->
-  "Out[183]=",ExpressionUUID->"2cf616f9-3b53-445b-9ae5-a373f66e6b35"],
+  "Out[134]=",ExpressionUUID->"9e5faf4d-b24f-46b6-894b-6e364162e027"],
 
 Cell[BoxData[
  RowBox[{
@@ -1195,10 +1190,10 @@ Cell[BoxData[
    3.923985284725133*^9, 3.9240623648670883`*^9, 3.924063040961043*^9, 
    3.9240631646408567`*^9, 3.924063250136647*^9, 3.92407045010114*^9, 
    3.9240706353346863`*^9, 3.924070713097659*^9, 3.9240709263507357`*^9, 
-   3.924071599305294*^9, 3.924161331688773*^9, 3.9244253412048483`*^9},
+   3.924071599305294*^9, 3.9244253055484447`*^9},
  Background->RGBColor[0.88, 1, 0.88],
  CellLabel->
-  "Out[184]=",ExpressionUUID->"401f6473-a7d6-43dd-857e-f5f4d18a6243"],
+  "Out[135]=",ExpressionUUID->"2d604f1b-6902-49e7-9529-d0da1e3d873d"],
 
 Cell[BoxData["0"], "Output",
  CellFrame->{{0, 0}, {0, 0}},
@@ -1212,10 +1207,10 @@ Cell[BoxData["0"], "Output",
    3.923985284725133*^9, 3.9240623648670883`*^9, 3.924063040961043*^9, 
    3.9240631646408567`*^9, 3.924063250136647*^9, 3.92407045010114*^9, 
    3.9240706353346863`*^9, 3.924070713097659*^9, 3.9240709263507357`*^9, 
-   3.924071599305294*^9, 3.924161331688773*^9, 3.924425341206758*^9},
+   3.924071599305294*^9, 3.924425305549226*^9},
  Background->RGBColor[0.88, 1, 0.88],
  CellLabel->
-  "Out[185]=",ExpressionUUID->"869374dc-d42c-4e03-b89d-b72109d9b68e"],
+  "Out[136]=",ExpressionUUID->"59aae9a6-4a9f-4d0f-96f5-ba9dd95a1b8d"],
 
 Cell[BoxData["\<\"'0' In here also proves that both the series are the same \
 to the order of 1/c^2\"\>"], "Print",
@@ -1230,11 +1225,11 @@ to the order of 1/c^2\"\>"], "Print",
    3.923985284727096*^9, 3.924062364869119*^9, 3.924063040962957*^9, 
    3.924063164643017*^9, 3.924063250139789*^9, 3.924070450103228*^9, 
    3.924070635335123*^9, 3.924070713097943*^9, 3.924070926430721*^9, 
-   3.9240715993879156`*^9, 3.924161331765367*^9, 3.92442534120732*^9},
+   3.9240715993879156`*^9, 3.924425305549674*^9},
  Background->RGBColor[0.88, 1, 0.88],
  CellLabel->
   "During evaluation of \
-In[177]:=",ExpressionUUID->"5c1e4d14-415a-4834-8cdd-9e2789c1fdae"]
+In[128]:=",ExpressionUUID->"0d5f4564-8769-4d92-828a-0bade4d97be3"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -1349,7 +1344,7 @@ Cell[BoxData[
    3.923975357853617*^9, 3.923982083946054*^9, {3.924063011360555*^9, 
    3.924063022080618*^9}, 3.924161268261499*^9},
  Background->RGBColor[
-  0.94, 0.88, 0.94],ExpressionUUID->"30f32696-e2d5-4a5b-a9e7-f49d666ee0f1"],
+  0.94, 0.88, 0.94],ExpressionUUID->"882bec4c-f1a3-4007-b49b-8a485b270e95"],
 
 Cell[CellGroupData[{
 
@@ -1357,7 +1352,7 @@ Cell["Obtaining  the  equation  of  motion", "Subtitle",
  CellFrame->{{0, 0}, {0, 0}},
  CellChangeTimes->{{3.924070817545604*^9, 3.924070845876033*^9}},
  Background->RGBColor[
-  0.94, 0.88, 0.94],ExpressionUUID->"3d4883ae-69b9-486b-b79d-14f7401bb9cd"],
+  0.94, 0.88, 0.94],ExpressionUUID->"7d531e31-0283-4880-b4ba-07d6ad8860d4"],
 
 Cell[BoxData[
  RowBox[{"(*", " ", 
@@ -1374,7 +1369,7 @@ Cell[BoxData[
     "true", " ", "anomaly"}]}], "*)"}]], "Input",
  Background->RGBColor[0.94, 0.88, 0.94],
  CellLabel->
-  "In[187]:=",ExpressionUUID->"b5d50101-cd73-49b0-a25d-14fcb591b59c"],
+  "In[138]:=",ExpressionUUID->"51b14bd1-ffb5-4dd1-aabf-fcb30ce3f75b"],
 
 Cell[CellGroupData[{
 
@@ -1524,7 +1519,7 @@ Cell[BoxData[
    3.924070216265425*^9}, {3.924070307735834*^9, 3.924070350983939*^9}},
  Background->RGBColor[0.94, 0.88, 0.94],
  CellLabel->
-  "In[188]:=",ExpressionUUID->"49d449d1-bcec-4508-af0c-af5e479ea46f"],
+  "In[139]:=",ExpressionUUID->"0b179657-a0e1-4237-a656-886cd488d084"],
 
 Cell[BoxData[
  FractionBox[
@@ -1566,16 +1561,15 @@ Cell[BoxData[
    3.923967391087047*^9, 3.923967447396344*^9, 3.9239675001185*^9, 
    3.9239680151490097`*^9, 3.923968379507173*^9, 3.923969278430718*^9, 
    3.923975364582336*^9, 3.923982495617772*^9, 3.923984398622779*^9, 
-   3.923984533283966*^9, 3.9239847611150947`*^9, 3.923984879652635*^9, 
+   3.923984533283966*^9, 3.9239847611150937`*^9, 3.9239848796526346`*^9, 
    3.923984961673397*^9, 3.923985037944934*^9, {3.923985079398499*^9, 
    3.923985087144129*^9}, 3.923985137364978*^9, 3.923985241134006*^9, {
    3.923985281169537*^9, 3.923985284732152*^9}, 3.924062364977685*^9, 
    3.924063041061845*^9, 3.924063164739736*^9, 3.924070450229616*^9, 
-   3.924070926571833*^9, 3.924071599620767*^9, 3.924161331992777*^9, 
-   3.9244253413106937`*^9},
+   3.924070926571833*^9, 3.924071599620767*^9, 3.924425305673181*^9},
  Background->RGBColor[0.94, 0.88, 0.94],
  CellLabel->
-  "Out[190]=",ExpressionUUID->"194d54d9-43b9-4d16-b99c-9d45093eedbe"],
+  "Out[141]=",ExpressionUUID->"1bfdd3d0-9b38-46fa-850b-d3f8e17c14d8"],
 
 Cell[BoxData[
  RowBox[{"\[IndentingNewLine]", 
@@ -1649,7 +1643,7 @@ Cell[BoxData[
    3.923985291296425*^9, 3.923985302028774*^9}},
  Background->RGBColor[0.94, 0.88, 0.94],
  CellLabel->
-  "In[191]:=",ExpressionUUID->"9a418bf9-4ed8-4e85-9418-d0b6b303d738"],
+  "In[142]:=",ExpressionUUID->"4070eede-68a4-4612-8839-0398d915d77b"],
 
 Cell[BoxData[
  RowBox[{
@@ -1706,10 +1700,10 @@ Cell[BoxData[
    3.923984961684088*^9, 3.923985087219366*^9, 3.9239851373832827`*^9, 
    3.923985284735052*^9, 3.924062365005263*^9, 3.924063041089582*^9, 
    3.924063164767643*^9, 3.9240704502590313`*^9, 3.924070926614525*^9, 
-   3.9240715996984468`*^9, 3.924161332031718*^9, 3.9244253413406277`*^9},
+   3.9240715996984468`*^9, 3.924425305704876*^9},
  Background->RGBColor[0.94, 0.88, 0.94],
  CellLabel->
-  "Out[192]=",ExpressionUUID->"38901151-4e8f-4123-85e2-bc90aba84896"],
+  "Out[143]=",ExpressionUUID->"9b9abf99-514a-4916-8bfb-1de73f5aab48"],
 
 Cell[BoxData[
  FractionBox[
@@ -1774,10 +1768,10 @@ Cell[BoxData[
    3.923984961684088*^9, 3.923985087219366*^9, 3.9239851373832827`*^9, 
    3.923985284735052*^9, 3.924062365005263*^9, 3.924063041089582*^9, 
    3.924063164767643*^9, 3.9240704502590313`*^9, 3.924070926614525*^9, 
-   3.9240715996984468`*^9, 3.924161332031718*^9, 3.924425341341778*^9},
+   3.9240715996984468`*^9, 3.924425305705975*^9},
  Background->RGBColor[0.94, 0.88, 0.94],
  CellLabel->
-  "Out[193]=",ExpressionUUID->"58daf825-b6b5-429f-9eeb-cfae6cab79ca"]
+  "Out[144]=",ExpressionUUID->"363a9cd9-aac4-4793-b95e-b256462a2a42"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -2206,7 +2200,7 @@ Cell[BoxData[
    3.924161281644003*^9, 3.924161283417405*^9}},
  Background->RGBColor[1, 0.925, 0.925],
  CellLabel->
-  "In[194]:=",ExpressionUUID->"e5631180-8431-43c1-8fde-247aa0eccdff"],
+  "In[145]:=",ExpressionUUID->"00ae6a50-8a82-4e9e-a12a-c0698dd0c93c"],
 
 Cell[CellGroupData[{
 
@@ -2267,9 +2261,9 @@ Cell[BoxData[
  CellFrame->{{0, 0}, {0, 0}},
  CellChangeTimes->{{3.923974409157761*^9, 3.9239744206254253`*^9}, {
   3.923974485825964*^9, 3.923974519608149*^9}, {3.92397458232117*^9, 
-  3.923974668123341*^9}, {3.923975390554957*^9, 3.9239753955484257`*^9}, {
+  3.9239746681233406`*^9}, {3.923975390554957*^9, 3.9239753955484257`*^9}, {
   3.923978355772438*^9, 3.923978369905135*^9}, {3.923978491835225*^9, 
-  3.923978497357764*^9}, {3.923978532739976*^9, 3.923978548656176*^9}, {
+  3.923978497357764*^9}, {3.923978532739976*^9, 3.9239785486561756`*^9}, {
   3.923981467622792*^9, 3.923981492595496*^9}, {3.923981681270789*^9, 
   3.923981694593873*^9}, {3.923982244240619*^9, 3.923982297923491*^9}, {
   3.923982432629425*^9, 3.923982450234*^9}, {3.92398346512435*^9, 
@@ -2279,7 +2273,7 @@ Cell[BoxData[
   3.924062920885208*^9, 3.924062953051231*^9}},
  Background->RGBColor[0.94, 0.88, 0.94],
  CellLabel->
-  "In[196]:=",ExpressionUUID->"2a757c6b-6313-4517-8776-8d3e08c5cf37"],
+  "In[147]:=",ExpressionUUID->"0f2e1807-d28e-4e9a-a9e8-d019c5468b9b"],
 
 Cell[BoxData[
  RowBox[{
@@ -2298,7 +2292,7 @@ Cell[BoxData[
    3.923981800688611*^9, {3.923981868058404*^9, 3.923981883948389*^9}, 
    3.923981958195133*^9, 3.923982036781229*^9, 3.923982090372176*^9, 
    3.92398217005765*^9, {3.923982229674903*^9, 3.923982299507156*^9}, {
-   3.92398298989134*^9, 3.923983012979925*^9}, 3.923983392455292*^9, 
+   3.92398298989134*^9, 3.9239830129799247`*^9}, 3.923983392455292*^9, 
    3.923983491292202*^9, {3.9239835300630493`*^9, 3.923983545280983*^9}, 
    3.923983652285487*^9, {3.923983688797844*^9, 3.923983747999117*^9}, {
    3.923983821064535*^9, 3.923983840244903*^9}, {3.923983900483859*^9, 
@@ -2307,11 +2301,10 @@ Cell[BoxData[
    3.923984961702173*^9, 3.923985087262722*^9, 3.923985137434745*^9, 
    3.923985284773394*^9, 3.924062365022868*^9, 3.924062954969917*^9, 
    3.924063041107875*^9, 3.924063164786789*^9, 3.924070450269114*^9, 
-   3.924070926635404*^9, 3.92407159971608*^9, 3.924161332048302*^9, 
-   3.924425341363304*^9},
+   3.924070926635404*^9, 3.92407159971608*^9, 3.924425305724688*^9},
  Background->RGBColor[0.94, 0.88, 0.94],
  CellLabel->
-  "Out[196]=",ExpressionUUID->"0d348422-548c-41b1-8828-1ea3db11ff4d"],
+  "Out[147]=",ExpressionUUID->"9069848a-b344-4bb7-ad7e-82c914db1544"],
 
 Cell[BoxData[
  RowBox[{
@@ -2339,7 +2332,7 @@ Cell[BoxData[
    3.923981800688611*^9, {3.923981868058404*^9, 3.923981883948389*^9}, 
    3.923981958195133*^9, 3.923982036781229*^9, 3.923982090372176*^9, 
    3.92398217005765*^9, {3.923982229674903*^9, 3.923982299507156*^9}, {
-   3.92398298989134*^9, 3.923983012979925*^9}, 3.923983392455292*^9, 
+   3.92398298989134*^9, 3.9239830129799247`*^9}, 3.923983392455292*^9, 
    3.923983491292202*^9, {3.9239835300630493`*^9, 3.923983545280983*^9}, 
    3.923983652285487*^9, {3.923983688797844*^9, 3.923983747999117*^9}, {
    3.923983821064535*^9, 3.923983840244903*^9}, {3.923983900483859*^9, 
@@ -2348,11 +2341,10 @@ Cell[BoxData[
    3.923984961702173*^9, 3.923985087262722*^9, 3.923985137434745*^9, 
    3.923985284773394*^9, 3.924062365022868*^9, 3.924062954969917*^9, 
    3.924063041107875*^9, 3.924063164786789*^9, 3.924070450269114*^9, 
-   3.924070926635404*^9, 3.92407159971608*^9, 3.924161332048302*^9, 
-   3.924425341363956*^9},
+   3.924070926635404*^9, 3.92407159971608*^9, 3.924425305743413*^9},
  Background->RGBColor[0.94, 0.88, 0.94],
  CellLabel->
-  "Out[197]=",ExpressionUUID->"1bbe65eb-b0a9-41a5-b1fd-81fa26d44b8e"],
+  "Out[148]=",ExpressionUUID->"4ecafc8d-bc8a-499d-aaef-8857d18eadaf"],
 
 Cell[BoxData[
  RowBox[{"B0", "+", 
@@ -2369,7 +2361,7 @@ Cell[BoxData[
    3.923981800688611*^9, {3.923981868058404*^9, 3.923981883948389*^9}, 
    3.923981958195133*^9, 3.923982036781229*^9, 3.923982090372176*^9, 
    3.92398217005765*^9, {3.923982229674903*^9, 3.923982299507156*^9}, {
-   3.92398298989134*^9, 3.923983012979925*^9}, 3.923983392455292*^9, 
+   3.92398298989134*^9, 3.9239830129799247`*^9}, 3.923983392455292*^9, 
    3.923983491292202*^9, {3.9239835300630493`*^9, 3.923983545280983*^9}, 
    3.923983652285487*^9, {3.923983688797844*^9, 3.923983747999117*^9}, {
    3.923983821064535*^9, 3.923983840244903*^9}, {3.923983900483859*^9, 
@@ -2378,11 +2370,10 @@ Cell[BoxData[
    3.923984961702173*^9, 3.923985087262722*^9, 3.923985137434745*^9, 
    3.923985284773394*^9, 3.924062365022868*^9, 3.924062954969917*^9, 
    3.924063041107875*^9, 3.924063164786789*^9, 3.924070450269114*^9, 
-   3.924070926635404*^9, 3.92407159971608*^9, 3.924161332048302*^9, 
-   3.924425341364491*^9},
+   3.924070926635404*^9, 3.92407159971608*^9, 3.9244253057441*^9},
  Background->RGBColor[0.94, 0.88, 0.94],
  CellLabel->
-  "Out[198]=",ExpressionUUID->"033bacc1-600a-4ef6-94ea-0baba3d18fe6"],
+  "Out[149]=",ExpressionUUID->"df29bce5-54fc-44fb-a2db-d7c3d40485d3"],
 
 Cell[BoxData[
  RowBox[{
@@ -2409,7 +2400,7 @@ Cell[BoxData[
    3.923981800688611*^9, {3.923981868058404*^9, 3.923981883948389*^9}, 
    3.923981958195133*^9, 3.923982036781229*^9, 3.923982090372176*^9, 
    3.92398217005765*^9, {3.923982229674903*^9, 3.923982299507156*^9}, {
-   3.92398298989134*^9, 3.923983012979925*^9}, 3.923983392455292*^9, 
+   3.92398298989134*^9, 3.9239830129799247`*^9}, 3.923983392455292*^9, 
    3.923983491292202*^9, {3.9239835300630493`*^9, 3.923983545280983*^9}, 
    3.923983652285487*^9, {3.923983688797844*^9, 3.923983747999117*^9}, {
    3.923983821064535*^9, 3.923983840244903*^9}, {3.923983900483859*^9, 
@@ -2418,11 +2409,10 @@ Cell[BoxData[
    3.923984961702173*^9, 3.923985087262722*^9, 3.923985137434745*^9, 
    3.923985284773394*^9, 3.924062365022868*^9, 3.924062954969917*^9, 
    3.924063041107875*^9, 3.924063164786789*^9, 3.924070450269114*^9, 
-   3.924070926635404*^9, 3.92407159971608*^9, 3.924161332048302*^9, 
-   3.924425341376259*^9},
+   3.924070926635404*^9, 3.92407159971608*^9, 3.9244253057590303`*^9},
  Background->RGBColor[0.94, 0.88, 0.94],
  CellLabel->
-  "Out[199]=",ExpressionUUID->"fdc67fcd-34a9-4670-a7c7-8573b58ef128"]
+  "Out[150]=",ExpressionUUID->"f3258402-53ee-4cba-b5bd-4532b4b3ee21"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2478,14 +2468,14 @@ Cell[BoxData[
    3.923967352303648*^9, 3.923967358705278*^9}, {3.923969326378044*^9, 
    3.923969351319409*^9}, {3.923982510172082*^9, 3.923982526416132*^9}, {
    3.92398443513673*^9, 3.92398443919652*^9}, 3.923984821761105*^9, {
-   3.923984905168668*^9, 3.923984958075354*^9}, 3.924062877089418*^9, {
+   3.923984905168668*^9, 3.9239849580753527`*^9}, 3.924062877089418*^9, {
    3.9240709007299757`*^9, 3.924070913011262*^9}, {3.924070964965026*^9, 
    3.924070965244583*^9}, {3.9240711038318777`*^9, 3.924071121848092*^9}, {
    3.924071159457823*^9, 3.924071169344452*^9}, 3.924071281747924*^9, {
    3.9241609986892557`*^9, 3.924161003053841*^9}},
  Background->RGBColor[0.94, 0.88, 0.94],
  CellLabel->
-  "In[200]:=",ExpressionUUID->"249ab1b4-6f5b-4c9c-85fe-759455a4440c"],
+  "In[151]:=",ExpressionUUID->"074b2553-c375-44e2-84d8-59896588f65c"],
 
 Cell[CellGroupData[{
 
@@ -2553,11 +2543,11 @@ Cell[BoxData[
    3.924063041138218*^9, 3.92406316482275*^9, 3.9240704503150043`*^9, 
    3.924070926665691*^9, 3.924070965837738*^9, 3.924071122633137*^9, {
    3.924071163192345*^9, 3.924071170077176*^9}, 3.924071599815956*^9, 
-   3.924161332188768*^9, 3.924425341384406*^9},
+   3.924425305765131*^9},
  Background->RGBColor[0.94, 0.88, 0.94],
  CellLabel->
   "During evaluation of \
-In[200]:=",ExpressionUUID->"86c27355-3132-45af-b931-606df77dd6c2"],
+In[151]:=",ExpressionUUID->"139483a4-31cf-42d2-9655-9604718201e9"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -2601,11 +2591,11 @@ Cell[BoxData[
    3.924063041138218*^9, 3.92406316482275*^9, 3.9240704503150043`*^9, 
    3.924070926665691*^9, 3.924070965837738*^9, 3.924071122633137*^9, {
    3.924071163192345*^9, 3.924071170077176*^9}, 3.924071599815956*^9, 
-   3.924161332188768*^9, 3.9244253413851347`*^9},
+   3.92442530576582*^9},
  Background->RGBColor[0.94, 0.88, 0.94],
  CellLabel->
   "During evaluation of \
-In[200]:=",ExpressionUUID->"4c4cf087-6176-413a-a816-09d983267e50"]
+In[151]:=",ExpressionUUID->"ec7b3e76-dea9-4e17-9a3f-9df6cfe4c42a"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -2677,11 +2667,10 @@ Cell[BoxData[
    3.9240623650726633`*^9, 3.924062888808609*^9, 3.924063041154766*^9, 
    3.924063164838641*^9, 3.924070450331099*^9, 3.924070926682513*^9, 
    3.924070965863347*^9, 3.924071122635516*^9, {3.92407116321326*^9, 
-   3.924071170099948*^9}, 3.924071599830669*^9, 3.924161332202779*^9, 
-   3.924425341398169*^9},
+   3.924071170099948*^9}, 3.924071599830669*^9, 3.9244253057785273`*^9},
  Background->RGBColor[0.94, 0.88, 0.94],
  CellLabel->
-  "Out[202]=",ExpressionUUID->"bad247ef-810a-45ba-b15b-0a560630a356"],
+  "Out[153]=",ExpressionUUID->"62d95b64-5013-458f-ad67-c0a09c98dd5f"],
 
 Cell[BoxData[
  RowBox[{
@@ -2739,20 +2728,19 @@ Cell[BoxData[
    3.9240623650726633`*^9, 3.924062888808609*^9, 3.924063041154766*^9, 
    3.924063164838641*^9, 3.924070450331099*^9, 3.924070926682513*^9, 
    3.924070965863347*^9, 3.924071122635516*^9, {3.92407116321326*^9, 
-   3.924071170099948*^9}, 3.924071599830669*^9, 3.924161332202779*^9, 
-   3.924425342435176*^9},
+   3.924071170099948*^9}, 3.924071599830669*^9, 3.924425306946381*^9},
  Background->RGBColor[0.94, 0.88, 0.94],
  CellLabel->
-  "Out[203]=",ExpressionUUID->"00b25e74-1845-4535-966e-d04aa37baf28"]
+  "Out[154]=",ExpressionUUID->"537167ce-8c77-479b-b305-ccbda9628523"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
 WindowSize->{808, 747},
-WindowMargins->{{3, Automatic}, {Automatic, 16}},
+WindowMargins->{{192, Automatic}, {Automatic, 0}},
 FrontEndVersion->"14.0 for Mac OS X ARM (64-bit) (December 12, 2023)",
 StyleDefinitions->"Default.nb",
-ExpressionUUID->"5e7e2d0a-1ab1-42af-a057-c29da85bd793"
+ExpressionUUID->"a357fa0f-ca28-4069-b451-517e54274700"
 ]
 (* End of Notebook Content *)
 
@@ -2766,81 +2754,81 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 159, 3, 98, "Title",ExpressionUUID->"bec725c1-dfcd-4abe-aef1-67de59b157f6"],
-Cell[742, 27, 2263, 65, 299, "Input",ExpressionUUID->"12ad4c6b-9df2-4fcd-82d4-50f233574409"],
+Cell[580, 22, 159, 3, 98, "Title",ExpressionUUID->"3ea3297b-b685-41cd-ba47-7dffad8d90c8"],
+Cell[742, 27, 2263, 65, 299, "Input",ExpressionUUID->"600b78cb-6309-40f1-9ea5-b6f72785797a"],
 Cell[CellGroupData[{
-Cell[3030, 96, 306, 6, 69, "Subtitle",ExpressionUUID->"baca1c8f-a4da-42c5-96b0-84477f554e12",
+Cell[3030, 96, 306, 6, 69, "Subtitle",ExpressionUUID->"822162f8-880a-4f0f-98a8-b5fdf44e1481",
  CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
-Cell[3339, 104, 8551, 238, 761, "Input",ExpressionUUID->"dbfc6131-9f53-4ea1-a84d-e7e5ce41a324",
+Cell[3339, 104, 8551, 238, 761, "Input",ExpressionUUID->"210c56a8-a445-42ee-999c-421636490435",
  CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
-Cell[11893, 344, 1200, 23, 44, "Message",ExpressionUUID->"c5b7f070-3751-42a3-ba21-0b3d1229e6e3",
+Cell[11893, 344, 1172, 22, 44, "Message",ExpressionUUID->"e51f8b71-9160-4bc3-ae6b-61ac72b4f05a",
  CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
-Cell[13096, 369, 1026, 18, 40, "Print",ExpressionUUID->"11c753d1-d18b-4350-84ab-e6e33231be81",
+Cell[13068, 368, 1000, 17, 40, "Print",ExpressionUUID->"7723ffdb-46da-47d0-b0cc-359e12e9d9d8",
  CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
-Cell[14125, 389, 4657, 117, 166, "Print",ExpressionUUID->"0a37f91b-fb22-4cf3-abe8-49b932a6e6b7",
+Cell[14071, 387, 4631, 116, 166, "Print",ExpressionUUID->"0eb5f2d2-d137-4cfc-8d6c-c91b9d58d019",
  CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
-Cell[18785, 508, 6342, 164, 161, "Print",ExpressionUUID->"8f06e1ff-32aa-4df8-a78a-4ca45853fed3",
+Cell[18705, 505, 6316, 163, 161, "Print",ExpressionUUID->"6a2ede49-84f0-47e8-8f58-b967d38fa5c2",
  CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
-Cell[25130, 674, 1956, 45, 62, "Print",ExpressionUUID->"12fd3cb1-c62c-4b9c-83fd-748c84109a7e",
+Cell[25024, 670, 1932, 44, 62, "Print",ExpressionUUID->"c7fc60d1-9981-485d-a8d6-a2a004ef25c0",
  CellGroupingRules->{"GroupTogetherGrouping", 10000.}]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[27123, 724, 320, 6, 69, "Subtitle",ExpressionUUID->"67f7cd29-3cb3-4a04-974e-96936912a4f6",
+Cell[26993, 719, 320, 6, 69, "Subtitle",ExpressionUUID->"9631c49f-0c4d-43b2-a15b-d6187323d444",
  CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
-Cell[27446, 732, 880, 20, 110, "Input",ExpressionUUID->"ad0b0a4d-6579-4684-a01a-1518ff03af66",
+Cell[27316, 727, 880, 20, 110, "Input",ExpressionUUID->"c1af4fb7-da9e-4b1d-ac4f-bb5b5d9c1c49",
  CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
-Cell[28329, 754, 7867, 228, 677, "Input",ExpressionUUID->"2b858c12-270c-4efe-b5a7-99ffd90246db",
+Cell[28199, 749, 7866, 228, 677, "Input",ExpressionUUID->"885e4a84-ea23-4414-9902-f006daf5c7a4",
  CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
-Cell[36199, 984, 939, 15, 50, "Output",ExpressionUUID->"49ca2ea1-9103-4179-928e-9adcee007cb1",
+Cell[36068, 979, 917, 15, 50, "Output",ExpressionUUID->"d7a31c74-4383-4205-8c95-373494b10e87",
  CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
-Cell[37141, 1001, 941, 15, 50, "Output",ExpressionUUID->"4ab99243-7a1f-4ffd-941a-9213f0554f26",
+Cell[36988, 996, 917, 15, 50, "Output",ExpressionUUID->"346377a7-e44f-4a6c-bd8d-b546ba13c393",
  CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
-Cell[38085, 1018, 939, 15, 50, "Output",ExpressionUUID->"7a2a3217-ffde-4d7c-aef0-1b7c206529c6",
+Cell[37908, 1013, 917, 15, 50, "Output",ExpressionUUID->"cbc3eba0-5a56-4bb6-8a89-5276f678ebef",
  CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
-Cell[39027, 1035, 1020, 17, 40, "Print",ExpressionUUID->"c6d89c2a-60d2-41db-8edc-6385483eb6d6",
+Cell[38828, 1030, 998, 17, 40, "Print",ExpressionUUID->"1571391a-0df4-4678-975a-eb10ed45806c",
  CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
-Cell[40050, 1054, 2888, 83, 131, "Output",ExpressionUUID->"2cf616f9-3b53-445b-9ae5-a373f66e6b35",
+Cell[39829, 1049, 2866, 83, 131, "Output",ExpressionUUID->"9e5faf4d-b24f-46b6-894b-6e364162e027",
  CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
-Cell[42941, 1139, 2237, 61, 118, "Output",ExpressionUUID->"401f6473-a7d6-43dd-857e-f5f4d18a6243",
+Cell[42698, 1134, 2215, 61, 118, "Output",ExpressionUUID->"2d604f1b-6902-49e7-9529-d0da1e3d873d",
  CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
-Cell[45181, 1202, 936, 15, 50, "Output",ExpressionUUID->"869374dc-d42c-4e03-b89d-b72109d9b68e",
+Cell[44916, 1197, 914, 15, 50, "Output",ExpressionUUID->"59aae9a6-4a9f-4d0f-96f5-ba9dd95a1b8d",
  CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
-Cell[46120, 1219, 1041, 17, 40, "Print",ExpressionUUID->"5c1e4d14-415a-4834-8cdd-9e2789c1fdae",
+Cell[45833, 1214, 1020, 17, 40, "Print",ExpressionUUID->"0d5f4564-8769-4d92-828a-0bade4d97be3",
  CellGroupingRules->{"GroupTogetherGrouping", 10001.}]
 }, Open  ]],
-Cell[47176, 1239, 5261, 112, 257, "Input",ExpressionUUID->"30f32696-e2d5-4a5b-a9e7-f49d666ee0f1",
+Cell[46868, 1234, 5261, 112, 257, "Input",ExpressionUUID->"882bec4c-f1a3-4007-b49b-8a485b270e95",
  Evaluatable->False],
 Cell[CellGroupData[{
-Cell[52462, 1355, 251, 4, 69, "Subtitle",ExpressionUUID->"3d4883ae-69b9-486b-b79d-14f7401bb9cd"],
-Cell[52716, 1361, 631, 15, 89, "Input",ExpressionUUID->"b5d50101-cd73-49b0-a25d-14fcb591b59c"],
+Cell[52154, 1350, 251, 4, 69, "Subtitle",ExpressionUUID->"7d531e31-0283-4880-b4ba-07d6ad8860d4"],
+Cell[52408, 1356, 631, 15, 89, "Input",ExpressionUUID->"51b14bd1-ffb5-4dd1-aabf-fcb30ce3f75b"],
 Cell[CellGroupData[{
-Cell[53372, 1380, 5567, 146, 365, "Input",ExpressionUUID->"49d449d1-bcec-4508-af0c-af5e479ea46f",
+Cell[53064, 1375, 5567, 146, 365, "Input",ExpressionUUID->"0b179657-a0e1-4237-a656-886cd488d084",
  CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
-Cell[58942, 1528, 1937, 49, 95, "Output",ExpressionUUID->"194d54d9-43b9-4d16-b99c-9d45093eedbe",
+Cell[58634, 1523, 1911, 48, 95, "Output",ExpressionUUID->"1bfdd3d0-9b38-46fa-850b-d3f8e17c14d8",
  CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
-Cell[60882, 1579, 2833, 72, 362, "Input",ExpressionUUID->"9a418bf9-4ed8-4e85-9418-d0b6b303d738",
+Cell[60548, 1573, 2833, 72, 362, "Input",ExpressionUUID->"4070eede-68a4-4612-8839-0398d915d77b",
  CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
-Cell[63718, 1653, 2286, 58, 78, "Output",ExpressionUUID->"38901151-4e8f-4123-85e2-bc90aba84896",
+Cell[63384, 1647, 2262, 58, 78, "Output",ExpressionUUID->"9b9abf99-514a-4916-8bfb-1de73f5aab48",
  CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
-Cell[66007, 1713, 2508, 66, 95, "Output",ExpressionUUID->"58daf825-b6b5-429f-9eeb-cfae6cab79ca",
+Cell[65649, 1707, 2486, 66, 95, "Output",ExpressionUUID->"363a9cd9-aac4-4793-b95e-b256462a2a42",
  CellGroupingRules->{"GroupTogetherGrouping", 10000.}]
 }, Open  ]],
-Cell[68530, 1782, 16832, 426, 1258, "Input",ExpressionUUID->"e5631180-8431-43c1-8fde-247aa0eccdff"],
+Cell[68150, 1776, 16832, 426, 1258, "Input",ExpressionUUID->"00ae6a50-8a82-4e9e-a12a-c0698dd0c93c"],
 Cell[CellGroupData[{
-Cell[85387, 2212, 2945, 69, 257, "Input",ExpressionUUID->"2a757c6b-6313-4517-8776-8d3e08c5cf37"],
-Cell[88335, 2283, 1792, 30, 68, "Output",ExpressionUUID->"0d348422-548c-41b1-8828-1ea3db11ff4d"],
-Cell[90130, 2315, 2052, 39, 55, "Output",ExpressionUUID->"1bbe65eb-b0a9-41a5-b1fd-81fa26d44b8e"],
-Cell[92185, 2356, 1748, 28, 50, "Output",ExpressionUUID->"033bacc1-600a-4ef6-94ea-0baba3d18fe6"],
-Cell[93936, 2386, 2024, 38, 73, "Output",ExpressionUUID->"fdc67fcd-34a9-4670-a7c7-8573b58ef128"]
+Cell[85007, 2206, 2949, 69, 257, "Input",ExpressionUUID->"0f2e1807-d28e-4e9a-a9e8-d019c5468b9b"],
+Cell[87959, 2277, 1768, 29, 68, "Output",ExpressionUUID->"9069848a-b344-4bb7-ad7e-82c914db1544"],
+Cell[89730, 2308, 2028, 38, 55, "Output",ExpressionUUID->"4ecafc8d-bc8a-499d-aaef-8857d18eadaf"],
+Cell[91761, 2348, 1722, 27, 50, "Output",ExpressionUUID->"df29bce5-54fc-44fb-a2db-d7c3d40485d3"],
+Cell[93486, 2377, 2002, 37, 73, "Output",ExpressionUUID->"f3258402-53ee-4cba-b5bd-4532b4b3ee21"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[95997, 2429, 2577, 58, 215, "Input",ExpressionUUID->"249ab1b4-6f5b-4c9c-85fe-759455a4440c"],
+Cell[95525, 2419, 2579, 58, 215, "Input",ExpressionUUID->"074b2553-c375-44e2-84d8-59896588f65c"],
 Cell[CellGroupData[{
-Cell[98599, 2491, 2682, 68, 66, "Print",ExpressionUUID->"86c27355-3132-45af-b931-606df77dd6c2"],
-Cell[101284, 2561, 1852, 46, 66, "Print",ExpressionUUID->"4c4cf087-6176-413a-a816-09d983267e50"]
+Cell[98129, 2481, 2660, 68, 66, "Print",ExpressionUUID->"139483a4-31cf-42d2-9655-9604718201e9"],
+Cell[100792, 2551, 1827, 46, 66, "Print",ExpressionUUID->"ec7b3e76-dea9-4e17-9a3f-9df6cfe4c42a"]
 }, Open  ]],
-Cell[103151, 2610, 2996, 73, 132, "Output",ExpressionUUID->"bad247ef-810a-45ba-b15b-0a560630a356"],
-Cell[106150, 2685, 2685, 60, 96, "Output",ExpressionUUID->"00b25e74-1845-4535-966e-d04aa37baf28"]
+Cell[102634, 2600, 2972, 72, 132, "Output",ExpressionUUID->"62d95b64-5013-458f-ad67-c0a09c98dd5f"],
+Cell[105609, 2674, 2659, 59, 96, "Output",ExpressionUUID->"537167ce-8c77-479b-b305-ccbda9628523"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
