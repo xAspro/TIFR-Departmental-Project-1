@@ -1,0 +1,1 @@
+{(-L^2 + 2*r + 2*En*r^2)/r^2 + (4*V^3*(-(chis*L) - chia*L*δ + chis*L*η + chis*En*L*r*η))/r^3, L/r^2 + (V^3*(2*chis + 2*chia*δ - 4*chis*η - 2*chis*En*r*η))/r^3}
