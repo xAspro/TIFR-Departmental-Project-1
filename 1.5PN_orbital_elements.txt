@@ -1,0 +1,18 @@
+Subscript[s, -]=(1+Sqrt[1+2 En L^2])/L^2+1/(c^3 (1+2 En L^2))4 (-((2 chis)/L^5)-(5 chis En)/L^3-(2 chis En^2)/L-(2 chis Sqrt[1+2 En L^2])/L^5-(3 chis En Sqrt[1+2 En L^2])/L^3-(2 chia \[Delta])/L^5-(5 chia En \[Delta])/L^3-(2 chia En^2 \[Delta])/L-(2 chia Sqrt[1+2 En L^2] \[Delta])/L^5-(3 chia En Sqrt[1+2 En L^2] \[Delta])/L^3+(2 chis \[Eta])/L^5+(6 chis En \[Eta])/L^3+(4 chis En^2 \[Eta])/L+(2 chis Sqrt[1+2 En L^2] \[Eta])/L^5+(4 chis En Sqrt[1+2 En L^2] 
+\[Eta])/L^3+(chis En^2 Sqrt[1+2 En L^2] \[Eta])/L)
+
+Subscript[s,+]=(1-Sqrt[1+2 En L^2])/L^2+1/c^3(-((16 chis)/L^5)-(8 chis En)/L^3+(8 chis)/(L^5 (1+2 En L^2))+(20 chis En)/(L^3 (1+2 En L^2))+(8 chis En^2)/(L (1+2 En L^2))+(8 chis)/(L^5 Sqrt[1+2 En L^2])+(12 chis En)/(L^3 Sqrt[1+2 En L^2])-(16 chia \[Delta])/L^5-(8 chia En \[Delta])/L^3+(8 chia \[Delta])/(L^5 (1+2 En L^2))+(20 chia En \[Delta])/(L^3 (1+2 En L^2))+(8 chia En^2 \[Delta])/(L (1+2 En L^2))+(8 chia \[Delta])/(L^5 Sqrt[1+2 En L^2])+(12 chia En \[Delta])/(L^3 Sqrt[1+2 En L^2])+(16 chis \[Eta])/L^5+(16 chis En \[Eta])/L^3-(8 chis \[Eta])/(L^5 (1+2 En L^2))-(24 chis En \[Eta])/(L^3 (1+2 En L^2))-(16 chis En^2 \[Eta])/(L (1+2 En L^2))-(8 chis \[Eta])/(L^5 Sqrt[1+2 En L^2])-(16 chis En \[Eta])/(L^3 Sqrt[1+2 En L^2])-(4 chis En^2 \[Eta])/(L Sqrt[1+2 En L^2]))
+
+e=Sqrt[1+2 En L^2]-(4 (-2 chis En-2 chis En^2 L^2-2 chia En \[Delta]-2 chia En^2 L^2 \[Delta]+2 chis En \[Eta]+3 chis En^2 L^2 \[Eta]))/(c^3 L Sqrt[1+2 En L^2])
+
+a=L^2/((-1+Sqrt[1+2 En L^2]) (1+Sqrt[1+2 En L^2]))+(8 L^3 (-chis En^2-chia En^2 \[Delta]+chis En^2 \[Eta]))/(c^3 (-1+Sqrt[1+2 En L^2])^2 (1+Sqrt[1+2 En L^2])^2)
+
+
+r[u]=(L^2/((-1+Sqrt[1+2 En L^2]) (1+Sqrt[1+2 En L^2]))+(8 L^3 (-chis En^2-chia En^2 \[Delta]+chis En^2 \[Eta]))/(c^3 (-1+Sqrt[1+2 En L^2])^2 (1+Sqrt[1+2 En L^2])^2)) (-1+(Sqrt[1+2 En L^2]-1/(c^3 L Sqrt[1+2 En L^2])4 (-2 chis En-2 chis En^2 L^2-2 chia En \[Delta]-2 chia En^2 L^2 \[Delta]+2 chis En \[Eta]+3 chis En^2 L^2 \[Eta])) Cosh[u])
+
+r[\[Nu]]=((L^2/((-1+Sqrt[1+2 En L^2]) (1+Sqrt[1+2 En L^2]))+(8 L^3 (-chis En^2-chia En^2 \[Delta]+chis En^2 \[Eta]))/(c^3 (-1+Sqrt[1+2 En L^2])^2 (1+Sqrt[1+2 En L^2])^2)) (1+(Sqrt[1+2 En L^2]-1/(c^3 L Sqrt[1+2 En L^2])4 (-2 chis En-2 chis En^2 L^2-2 chia En \[Delta]-2 chia En^2 L^2 \[Delta]+2 chis En \[Eta]+3 chis En^2 L^2 \[Eta])) Cos[\[Nu]]))/(-1+(Sqrt[1+2 En L^2]-1/(c^3 L Sqrt[1+2 En L^2])4 (-2 chis En-2 chis En^2 L^2-2 chia En \[Delta]-2 chia En^2 L^2 \[Delta]+2 chis En \[Eta]+3 chis En^2 L^2 \[Eta]))^2)
+
+
+u=ArcSech[-((s (c^3 (L+2 En L^3)+8 chia En (1+En L^2) \[Delta]+4 chis En (2+En L^2 (2-3 \[Eta])-2 \[Eta])) (c^3 L-4 chia En \[Delta]+4 chis En (-1+\[Eta])))/(c^3 L Sqrt[1+2 En L^2] (c^3 L (2 En-s)+4 En s (chis+chia \[Delta]-chis \[Eta]))))]
+
+\[Nu]=2 ArcTan[\[Sqrt]((c^3 L (1+2 En L^2+Sqrt[1+2 En L^2])+8 chia En (1+En L^2) \[Delta]+4 chis En (2+En L^2 (2-3 \[Eta])-2 \[Eta]))/(c^3 (L+2 En L^3-L Sqrt[1+2 En L^2])+8 chia En (1+En L^2) \[Delta]+4 chis En (2+En L^2 (2-3 \[Eta])-2 \[Eta]))) Tanh[1/2 ArcSech[-((s (c^3 (L+2 En L^3)+8 chia En (1+En L^2) \[Delta]+4 chis En (2+En L^2 (2-3 \[Eta])-2 \[Eta])) (c^3 L-4 chia En \[Delta]+4 chis En (-1+\[Eta])))/(c^3 L Sqrt[1+2 En L^2] (c^3 L (2 En-s)+4 En s (chis+chia \[Delta]-chis \[Eta]))))
