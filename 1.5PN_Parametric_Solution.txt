@@ -6,6 +6,6 @@ and er^2= 1 + 2*En*L^2 + (2*(8*En*(1 + En*L^2)*(chis + chia*δ) - 4*chis*En*(2 +
 where P= Pi/(Sqrt[2]*En^(3/2)) 
 et^2= 1 + 2*En*L^2 + (8*En*(chis + chia*δ - chis*(1 + En*L^2)*η))/(c^3*L) 
 
-2π/Φ Δphi= ν+ephi Sin[ν] 
+2π/Φ Δphi= ν 
 where Φ= 2*Pi + (4*Pi*(-2*chia*δ + chis*(-2 + η)))/(c^3*L^3) 
-and ephi^2= 1 + 2*En*L^2 + (4*En*(L^3*Sqrt[1 + 2*En*L^2]*y + 2*En*L^2*(2*chia*δ + chis*(2 - 3*η)) + 4*(chis + chia*δ - chis*η)))/(c^3*L)
+and ephi^2= 1 + 2*En*L^2 + (2*(8*En*(1 + En*L^2)*(chis + chia*δ) - 4*chis*En*(3 + 5*En*L^2)*η))/(c^3*L)
