@@ -1,1 +1,1 @@
-{"Δphi= ", ν + (-4*chia*δ*ν + 2*chis*(-2 + η)*ν - 2*chis*Sqrt[1 + 2*En*L^2]*η*Sin[ν])/(c^3*L^3), "Δt= ", (Sqrt[2]*(chis + chia*δ - chis*(1 + En*L^2)*η)*Sinh[u])/(c^3*Sqrt[En]*L*Sqrt[1 + 2*En*L^2]) + (-u + Sqrt[1 + 2*En*L^2]*Sinh[u])/(2*Sqrt[2]*En^(3/2))}
+{"Δphi= ", ν + (-4*chia*δ*ν + 2*chis*(-2 + η)*ν - 2*chis*Sqrt[1 + 2*En*h^2]*η*Sin[ν])/(c^3*h^3), "Δt= ", (Sqrt[2]*(chis + chia*δ - chis*(1 + En*h^2)*η)*Sinh[u])/(c^3*Sqrt[En]*h*Sqrt[1 + 2*En*h^2]) + (-u + Sqrt[1 + 2*En*h^2]*Sinh[u])/(2*Sqrt[2]*En^(3/2))}
